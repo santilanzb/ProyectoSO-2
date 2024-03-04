@@ -13,15 +13,17 @@ public class Avatar {
     Queue priority3A = new Queue();
     Queue refuerzoA = new Queue();
     
-    public class Aang extends Characters {
+    public static class Aang extends Characters {
         int id;
         public Aang(){
-           super();
-           
+           super();          
         }
-        public void Atributos(){
-            
-            
+    }
+    
+    public static class Katara extends Characters{
+        int id;
+        public Katara(){
+           super();          
         }
     }
 }
