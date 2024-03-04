@@ -16,11 +16,12 @@ public class Characters {
     public boolean calidad;
     
 
-    public Characters(int habilidad, int puntosVida, int fuerza, int agilidad) {
-        this.Habilidad = habilidad;
-        this.PuntosVida = puntosVida;
-        this.Fuerza = fuerza;
-        this.Agilidad = agilidad;
+    public Characters() {
+        this.Habilidad = generarHabilidad(DetCalidad(60));
+        this.PuntosVida = generarPuntosVida(DetCalidad(70));
+        this.Fuerza = generarFuerza(DetCalidad(50));
+        this.Agilidad = generarAgilidad(DetCalidad(40));
+        this.calidad = false;
     }
 
     public int getHabilidad() {
@@ -65,22 +66,40 @@ public class Characters {
         }
     }
     
-    public static Characters generarAtributos(boolean calidad) {
+    public int generarHabilidad(boolean calidad) {
         Random random = new Random();
-        int habilidad, puntosVida, fuerza, agilidad;
-
-        if (calidad) {
-            habilidad = random.nextInt(7, 11);
-            puntosVida = random.nextInt(7, 11);
-            fuerza = random.nextInt(7, 11);
-            agilidad = random.nextInt(7, 11);
-        } else {
-            habilidad = random.nextInt(0, 7);
-            puntosVida = random.nextInt(0, 7);
-            fuerza = random.nextInt(0, 7);
-            agilidad = random.nextInt(0, 7);
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
         }
-
-        return new Characters(habilidad, puntosVida, fuerza, agilidad);
     }
+        
+    public int generarPuntosVida(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+    
+    public int generarFuerza(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+    
+    public int generarAgilidad(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+
 }
