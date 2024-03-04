@@ -13,15 +13,16 @@ public class Characters {
     public int PuntosVida;
     public int Fuerza;
     public int Agilidad;
-    public boolean Calidad;
+    public boolean calidad;
     
 
     public Characters() {
-        this.Habilidad = 0;
-        this.PuntosVida = 0;
-        this.Fuerza = 0;
-        this.Agilidad = 0;
-        this.Calidad = false;
+
+        this.Habilidad = generarHabilidad(DetCalidad(60));
+        this.PuntosVida = generarPuntosVida(DetCalidad(70));
+        this.Fuerza = generarFuerza(DetCalidad(50));
+        this.Agilidad = generarAgilidad(DetCalidad(40));
+        this.calidad = false;
     }
 
     public int getHabilidad() {
@@ -60,10 +61,45 @@ public class Characters {
         Random random = new Random();
         int num = random.nextInt(101);
         if (num <= probabilidad){
-            return Calidad = true;
+            return calidad = true;
         } else {
-            return Calidad = false;
+            return calidad = false;
         }
     }
-     
+    
+    public int generarHabilidad(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+        
+    public int generarPuntosVida(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+    
+    public int generarFuerza(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
+    
+    public int generarAgilidad(boolean calidad) {
+        Random random = new Random();
+        if (calidad){
+            return random.nextInt(8,11 );
+        }else {
+            return random.nextInt(0,7);        
+        }
+    }
 }

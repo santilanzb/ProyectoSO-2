@@ -15,13 +15,13 @@ public class Avatar {
     
     public class Aang extends Characters {
         int id;
-        public Aang(int habilidad, int puntosVida, int fuerza, int agilidad){
-           super(habilidad,puntosVida,fuerza,agilidad);
+        public Aang(){
+           super();
            
         }
         public void Atributos(){
-            DetCalidad(50);
-            generarAtributos(calidad);
+            
+            
         }
     }
 }
