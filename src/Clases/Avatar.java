@@ -64,10 +64,10 @@ public class Avatar {
         }
     }
     
-    public static class tyLee extends Characters{
+    public static class TyLee extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        public tyLee(){
+        public TyLee(){
            super();          
         }
     }
@@ -106,9 +106,9 @@ public class Avatar {
             cont ++;
         }if (characters.Fuerza >= 8){
             cont ++;
-        }if (cont == 4){
+        }if (cont == 4 || cont == 3){
             priority1A.enqueue(characters);
-        }else if (cont == 2 || cont == 3){
+        }else if (cont == 2 ){
             priority2A.enqueue(characters);
         }if (cont == 0 || cont == 1){
             priority3A.enqueue(characters);

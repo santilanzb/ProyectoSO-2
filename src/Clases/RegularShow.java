@@ -95,4 +95,23 @@ public class RegularShow {
            super();          
         }
     }
+    
+    public void DetCalidadPersonajes(Characters characters){
+        int cont = 0;
+        if (characters.Habilidad >= 8){
+            cont ++;
+        }if (characters.Agilidad >= 8){
+            cont ++;
+        }if (characters.PuntosVida >= 8){
+            cont ++;
+        }if (characters.Fuerza >= 8){
+            cont ++;
+        }if (cont == 4 || cont == 3){
+            priority1RS.enqueue(characters);
+        }else if (cont == 2 ){
+            priority2RS.enqueue(characters);
+        }if (cont == 0 || cont == 1){
+            priority3RS.enqueue(characters);
+        }
+    }
 }

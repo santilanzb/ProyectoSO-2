@@ -13,6 +13,16 @@ import Clases.Avatar.Sokka;
 import Clases.Avatar.Suki;
 import Clases.Avatar.TophBeifong;
 import Clases.Avatar.TyLee;
+import Clases.RegularShow.Benson;
+import Clases.RegularShow.Fantasmin;
+import Clases.RegularShow.Margarita;
+import Clases.RegularShow.Mordecai;
+import Clases.RegularShow.MrMaellard;
+import Clases.RegularShow.Musculoso;
+import Clases.RegularShow.Papaleta;
+import Clases.RegularShow.Rigby;
+import Clases.RegularShow.Skips;
+import Clases.RegularShow.Starla;
 
 
 /**
@@ -33,32 +43,71 @@ public class Main {
         TophBeifong tophbeifong = new TophBeifong();
         Azula azula = new Azula();
         Sokka sokka = new Sokka();
-        TyLee tyLee = new TyLee();
+        TyLee tylee = new TyLee();
         Iroh iroh = new Iroh();
         Appa appa = new Appa();
         Suki suki = new Suki();
         
+        //Agregar Colas prioridad Avatar
+        avatar.DetCalidadPersonajes(aang);
+        avatar.DetCalidadPersonajes(katara);
+        avatar.DetCalidadPersonajes(principezuko);
+        avatar.DetCalidadPersonajes(tophbeifong);
+        avatar.DetCalidadPersonajes(azula);
+        avatar.DetCalidadPersonajes(sokka);
+        avatar.DetCalidadPersonajes(tylee);
+        avatar.DetCalidadPersonajes(iroh);
+        avatar.DetCalidadPersonajes(appa);
+        avatar.DetCalidadPersonajes(suki);
         
-        
-        
-       
-        
-        
-        
-        
-        
-        
-        
-        
-        
-       avatar.DetCalidadPersonajes(suki);
-        System.out.println("C1");
+        // Mostrar Colas Avatar
+       System.out.println("C1 Avatar");
        avatar.priority1A.print();
-       System.out.println("C2");
+       System.out.println("");
+       System.out.println("C2 Avatar");
        avatar.priority2A.print();
-       System.out.println("C3");
+       System.out.println("");
+       System.out.println("C3 Avatar");
        avatar.priority3A.print();
+       System.out.println("");
+       System.out.println("");
        
+       // Personajes Regular Show
+       RegularShow regularshow = new RegularShow();
+       Mordecai mordecai = new Mordecai();
+       Rigby rigby = new Rigby();
+       Musculoso musculoso = new Musculoso();
+       Benson benson = new Benson();
+       Skips skips = new Skips();
+       Papaleta  papaleta = new  Papaleta();
+       Starla starla = new Starla();
+       Margarita margarita = new Margarita();
+       Fantasmin fantasmin = new Fantasmin();
+       MrMaellard mrmaellard = new MrMaellard();
+       
+       //Agregar Colas prioridad RegularShow
+       regularshow.DetCalidadPersonajes(mordecai);
+       regularshow.DetCalidadPersonajes(rigby);
+       regularshow.DetCalidadPersonajes(musculoso);
+       regularshow.DetCalidadPersonajes(benson);
+       regularshow.DetCalidadPersonajes(skips);
+       regularshow.DetCalidadPersonajes(papaleta);
+       regularshow.DetCalidadPersonajes(starla);
+       regularshow.DetCalidadPersonajes(margarita);
+       regularshow.DetCalidadPersonajes(fantasmin);
+       regularshow.DetCalidadPersonajes(mrmaellard);
+       
+       // Mostrar Colas RegularShow
+        System.out.println("C1 RegularShow");
+        regularshow.priority1RS.print();
+        System.out.println("");
+        System.out.println("C2 RegularShow");
+        regularshow.priority2RS.print();
+        System.out.println("");
+        System.out.println("C3 RegularShow");
+        regularshow.priority3RS.print();
+        System.out.println("");
+        System.out.println("");
     }
     
 }
