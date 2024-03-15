@@ -20,7 +20,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Aang(){
-           super();          
+           super();
         }
     }
     
@@ -96,5 +96,26 @@ public class Avatar {
         }
     }
     
+<<<<<<< HEAD
+=======
+    public void DetCalidadPersonajes(Characters characters){
+        int cont = 0;
+        if (characters.Habilidad >= 8){
+            cont ++;
+        }if (characters.Agilidad >= 8){
+            cont ++;
+        }if (characters.PuntosVida >= 8){
+            cont ++;
+        }if (characters.Fuerza >= 8){
+            cont ++;
+        }if (cont == 4){
+            priority1A.enqueue(characters);
+        }else if (cont == 2 || cont == 3){
+            priority2A.enqueue(characters);
+        }if (cont == 0 || cont == 1){
+            priority3A.enqueue(characters);
+        }
+    }
+>>>>>>> bf579320a9aafe1e5758054d1c80546e98c43425
 }
 
