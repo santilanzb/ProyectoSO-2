@@ -19,6 +19,7 @@ public class Avatar {
     public static class Aang extends Characters {
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="aire";
         public Aang(){
            super();
         }
@@ -27,6 +28,7 @@ public class Avatar {
     public static class Katara extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="agua";
         public Katara(){
            super();          
         }
@@ -35,6 +37,7 @@ public class Avatar {
     public static class PrincipeZuko extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="fuego";
         public PrincipeZuko(){
            super();          
         }
@@ -43,6 +46,7 @@ public class Avatar {
     public static class TophBeifong extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="tierra";
         public TophBeifong(){
            super();          
         }
@@ -51,6 +55,7 @@ public class Avatar {
     public static class Azula extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="fuego";
         public Azula(){
            super();          
         }
@@ -59,6 +64,7 @@ public class Avatar {
     public static class Sokka extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="calidoso";
         public Sokka(){
            super();          
         }
@@ -67,21 +73,24 @@ public class Avatar {
     public static class TyLee extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="fuego";
         public TyLee(){
            super();          
         }
     }
     
-    public static class Iroh extends Characters{
+    public static class Yue extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        public Iroh(){
+        String special ="agua";
+        public Yue(){
            super();          
         }
     }
     
     public static class Appa extends Characters{
         Random random = new Random();
+        String special ="aire";
         int id = random. nextInt(0,1000);
         public Appa(){
            super();          
@@ -91,6 +100,7 @@ public class Avatar {
     public static class Suki extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        String special ="tierra";
         public Suki(){
            super();          
         }

@@ -6,7 +6,7 @@ package Clases;
 import static Clases.Avatar.Aang;
 import Clases.Avatar.Appa;
 import Clases.Avatar.Azula;
-import Clases.Avatar.Iroh;
+import Clases.Avatar.Yue;
 import static Clases.Avatar.Katara;
 import Clases.Avatar.PrincipeZuko;
 import Clases.Avatar.Sokka;
@@ -44,7 +44,7 @@ public class Main {
         Azula azula = new Azula();
         Sokka sokka = new Sokka();
         TyLee tylee = new TyLee();
-        Iroh iroh = new Iroh();
+        Yue iroh = new Yue();
         Appa appa = new Appa();
         Suki suki = new Suki();
         
