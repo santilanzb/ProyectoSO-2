@@ -4,6 +4,8 @@
  */
 package Clases;
 
+import java.util.Random;
+
 /**
  *
  * @author Abraham Santana
@@ -15,70 +17,80 @@ public class RegularShow {
     Queue refuerzoRS = new Queue();
     
     public static class Mordecai extends Characters {
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Mordecai(){
            super();          
         }
     }
     
     public static class Rigby extends Characters{
-        int id;
+       Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Rigby(){
            super();          
         }
     }
     
     public static class Musculoso extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Musculoso(){
            super();          
         }
     }
     
     public static class Benson extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Benson(){
            super();          
         }
     }
     
     public static class Skips extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Skips(){
            super();          
         }
     }
     
     public static class Papaleta extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Papaleta(){
            super();          
         }
     }
     
     public static class Starla extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Starla(){
            super();          
         }
     }
     
     public static class Margarita extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Margarita(){
            super();          
         }
     }
     
     public static class Fantasmin extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public Fantasmin(){
            super();          
         }
     }
     
     public static class MrMaellard extends Characters{
-        int id;
+        Random random = new Random();
+        int id = random. nextInt(0,1000);
         public MrMaellard(){
            super();          
         }
