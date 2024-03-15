@@ -102,4 +102,5 @@ public class Characters {
             return random.nextInt(0,7);        
         }
     }
+
 }

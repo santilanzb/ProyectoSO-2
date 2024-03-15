@@ -5,6 +5,7 @@
 package Clases;
 import static Clases.Avatar.Aang;
 import static Clases.Avatar.Katara;
+import Clases.Avatar.Suki;
 
 
 /**
@@ -17,9 +18,9 @@ public class Main {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        Aang aang = new Aang();
+        Suki suki = new Suki();
         Katara katara = new Katara();
-        System.out.println(aang.Habilidad);
+        System.out.println(suki.id);
         System.out.println(katara.Habilidad);
     }
     
