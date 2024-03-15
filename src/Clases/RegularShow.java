@@ -16,6 +16,7 @@ public class RegularShow {
     Queue priority3RS = new Queue();
     Queue refuerzoRS = new Queue();
     
+    
     public static class Mordecai extends Characters {
         Random random = new Random();
         int id = random. nextInt(0,1000);

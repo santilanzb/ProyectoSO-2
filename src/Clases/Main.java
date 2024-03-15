@@ -109,6 +109,16 @@ public class Main {
         System.out.println("");
         System.out.println("");
         
+        
+        //AI ai = new AI();
+       //ai.Pelea((Characters) regularshow.priority1RS.getHead().getElement(),(Characters) avatar.priority1A.getHead().getElement());
+        //ai.Winners.print();
+        
+        //System.out.println("");
+        //System.out.println("C1 Avatar");
+        //avatar.priority1A.print();
+        //System.out.println("C1 RegularShow");
+        //regularshow.priority1RS.print();
     }
     
 }
