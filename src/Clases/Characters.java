@@ -14,6 +14,8 @@ public class Characters {
     public int Fuerza;
     public int Agilidad;
     public boolean calidad;
+    public String special;
+    
     
 
     public Characters() {
@@ -23,6 +25,7 @@ public class Characters {
         this.Fuerza = generarFuerza(DetCalidad(50));
         this.Agilidad = generarAgilidad(DetCalidad(40));
         this.calidad = false;
+        this.special = generarEspecial();
     }
 
     public int getHabilidad() {
@@ -56,6 +59,16 @@ public class Characters {
     public void setAgilidad(int Agilidad) {
         this.Agilidad = Agilidad;
     }
+
+    public String getSpecial() {
+        return special;
+    }
+
+    public void setSpecial(String special) {
+        this.special = special;
+    }
+    
+    
     
     public boolean DetCalidad(int probabilidad){
         Random random = new Random();
@@ -101,6 +114,25 @@ public class Characters {
         }else {
             return random.nextInt(0,7);        
         }
+    }
+    
+    public String generarEspecial(){
+        
+        String aire = "aire";
+        String fuego = "fuego";
+        String agua = "agua";
+        String enchufado = "enchufado";
+        String tierra = "tierra";
+        
+        String[] strings = {aire, agua, enchufado, tierra, fuego};
+        
+        Random random = new Random();
+        int randomIndex = random.nextInt(strings.length);
+        String randomString = strings[randomIndex];
+        
+        return randomString;
+        
+        
     }
     
 }

@@ -108,6 +108,7 @@ public class Main {
         regularshow.priority3RS.print();
         System.out.println("");
         System.out.println("");
+        
     }
     
 }

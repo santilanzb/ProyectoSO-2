@@ -19,7 +19,6 @@ public class RegularShow {
     public static class Mordecai extends Characters {
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="simp";
         public Mordecai(){
            super();          
         }
@@ -28,7 +27,6 @@ public class RegularShow {
     public static class Rigby extends Characters{
        Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="malandro";
         public Rigby(){
            super();          
         }
@@ -37,7 +35,6 @@ public class RegularShow {
     public static class Musculoso extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="enchufado";
         public Musculoso(){
            super();          
         }
@@ -46,7 +43,6 @@ public class RegularShow {
     public static class Benson extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="fosforito";
         public Benson(){
            super();          
         }
@@ -55,7 +51,6 @@ public class RegularShow {
     public static class Skips extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="enchufado";
         public Skips(){
            super();          
         }
@@ -64,7 +59,6 @@ public class RegularShow {
     public static class Papaleta extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="calidoso";
         public Papaleta(){
            super();          
         }
@@ -73,7 +67,6 @@ public class RegularShow {
     public static class Starla extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="malandro";
         public Starla(){
            super();          
         }
@@ -82,7 +75,6 @@ public class RegularShow {
     public static class Margarita extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="simp";
         public Margarita(){
            super();          
         }
@@ -91,7 +83,6 @@ public class RegularShow {
     public static class Fantasmin extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="enchufado";
         public Fantasmin(){
            super();          
         }
@@ -100,7 +91,6 @@ public class RegularShow {
     public static class MrMaellard extends Characters{
         Random random = new Random();
         int id = random. nextInt(0,1000);
-        String special ="fosforito";
         public MrMaellard(){
            super();          
         }
