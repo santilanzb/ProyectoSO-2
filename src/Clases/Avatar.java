@@ -13,15 +13,73 @@ public class Avatar {
     Queue priority3A = new Queue();
     Queue refuerzoA = new Queue();
     
-    public class Aang extends Characters {
+    public static class Aang extends Characters {
         int id;
         public Aang(){
-           super();
-           
+           super();          
         }
-        public void Atributos(){
-            
-            
+    }
+    
+    public static class Katara extends Characters{
+        int id;
+        public Katara(){
+           super();          
+        }
+    }
+    
+    public static class PrincipeZuko extends Characters{
+        int id;
+        public PrincipeZuko(){
+           super();          
+        }
+    }
+    
+    public static class TophBeifong extends Characters{
+        int id;
+        public TophBeifong(){
+           super();          
+        }
+    }
+    
+    public static class Azula extends Characters{
+        int id;
+        public Azula(){
+           super();          
+        }
+    }
+    
+    public static class Sokka extends Characters{
+        int id;
+        public Sokka(){
+           super();          
+        }
+    }
+    
+    public static class tyLee extends Characters{
+        int id;
+        public tyLee(){
+           super();          
+        }
+    }
+    
+    public static class Iroh extends Characters{
+        int id;
+        public Iroh(){
+           super();          
+        }
+    }
+    
+    public static class Appa extends Characters{
+        int id;
+        public Appa(){
+           super();          
+        }
+    }
+    
+    public static class Suki extends Characters{
+        int id;
+        public Suki(){
+           super();          
         }
     }
 }
