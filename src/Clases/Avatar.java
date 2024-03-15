@@ -96,8 +96,6 @@ public class Avatar {
         }
     }
     
-<<<<<<< HEAD
-=======
     public void DetCalidadPersonajes(Characters characters){
         int cont = 0;
         if (characters.Habilidad >= 8){
@@ -116,6 +114,6 @@ public class Avatar {
             priority3A.enqueue(characters);
         }
     }
->>>>>>> bf579320a9aafe1e5758054d1c80546e98c43425
+
 }
 
