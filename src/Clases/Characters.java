@@ -118,21 +118,20 @@ public class Characters {
     
     public String generarEspecial(){
         
-        String aire = "aire";
-        String fuego = "fuego";
-        String agua = "agua";
+        String milloneta = "milloneta";
         String enchufado = "enchufado";
-        String tierra = "tierra";
+        String malandro = "malandro";
+        String calvo = "calvo";
+        String calidoso = "calidoso";
         
-        String[] strings = {aire, agua, enchufado, tierra, fuego};
+        
+        String[] strings = {milloneta,calidoso, enchufado, malandro, calvo};
         
         Random random = new Random();
         int randomIndex = random.nextInt(strings.length);
         String randomString = strings[randomIndex];
         
         return randomString;
-        
-        
-    }
+        }
     
 }
