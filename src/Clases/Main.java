@@ -114,7 +114,7 @@ public class Main {
         //AI ai = new AI();
        //ai.Pelea((Characters) regularshow.priority1RS.getHead().getElement(),(Characters) avatar.priority1A.getHead().getElement());
         //ai.Winners.print();
-        
+     
         //System.out.println("");
         //System.out.println("C1 Avatar");
         //avatar.priority1A.print();
