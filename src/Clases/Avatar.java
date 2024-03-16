@@ -4,8 +4,11 @@
  */
 package Clases;
 
+import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 import java.util.Random;
-
+import javax.imageio.ImageIO;
 /**
  *
  * @author Abraham Santana
@@ -19,9 +22,26 @@ public class Avatar {
     public static class Aang extends Characters {
         Random random = new Random();
         int id = random. nextInt(0,1000);
+        private Image photo;
+        
         public Aang(){
            super();
+           this.photo = null; // Inicializar photo como null
         }
+        
+        public void setPhoto(String imagePath) {
+        try {
+            File file = new File(imagePath);
+            this.photo = ImageIO.read(file);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+        // Método para obtener la foto
+        public Image getPhoto() {
+        return photo;
+        }
+        
     }
     
     public static class Katara extends Characters{

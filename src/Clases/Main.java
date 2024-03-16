@@ -23,6 +23,7 @@ import Clases.RegularShow.Papaleta;
 import Clases.RegularShow.Rigby;
 import Clases.RegularShow.Skips;
 import Clases.RegularShow.Starla;
+import java.awt.Image;
 
 
 /**
@@ -119,6 +120,10 @@ public class Main {
         //avatar.priority1A.print();
         //System.out.println("C1 RegularShow");
         //regularshow.priority1RS.print();
+        
+        
+        aang.setPhoto("src/ImagesAvatar/Aang.jpg");
+        Image photo = aang.getPhoto();
     }
     
 }
