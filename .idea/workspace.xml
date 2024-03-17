@@ -8,14 +8,9 @@
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/AI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clases/Avatar.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Avatar.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/Characters.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Characters.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clases/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clases/RegularShow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/RegularShow.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/Interfaz.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/Interfaz.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +67,8 @@
       <workItem from="1710477923096" duration="948000" />
       <workItem from="1710625450397" duration="11614000" />
       <workItem from="1710645855234" duration="1107000" />
+      <workItem from="1710649096436" duration="2312000" />
+      <workItem from="1710700996969" duration="2568000" />
     </task>
     <servers />
   </component>

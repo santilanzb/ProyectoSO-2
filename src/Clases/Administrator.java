@@ -3,6 +3,7 @@
  * @author santi
  */
 package Clases;
+import java.util.Random;
 
 public class Administrator extends Thread {
     Avatar avatar = new Avatar();
@@ -73,6 +74,14 @@ public class Administrator extends Thread {
         Characters character1 = null;
         Characters character2 = null;
 
+        // Increment the counter for each character in the priority2A and priority3A queues
+        incrementCountersAndCheck(avatar.priority2A, avatar.priority3A, avatar.priority1A);
+        incrementCountersAndCheck(avatar.priority3A, null, avatar.priority2A);
+
+        // Increment the counter for each character in the priority2RS and priority3RS queues
+        incrementCountersAndCheck(regularShow.priority2RS, regularShow.priority3RS, regularShow.priority1RS);
+        incrementCountersAndCheck(regularShow.priority3RS, null, regularShow.priority2RS);
+
         // Fetch the head of the queue with the highest priority from Avatar
         if (!avatar.priority1A.isEmpty()) {
             character1 = (Characters) avatar.priority1A.dequeue().getElement();
@@ -94,6 +103,56 @@ public class Administrator extends Thread {
         // If we have a character from both shows, make them fight
         if (character1 != null && character2 != null) {
             ai.Pelea(character1, character2);
+        }
+    }
+
+    public void addRandomCharacter() {
+        Random random = new Random();
+        int randomNumber = random.nextInt(10);
+
+        if (randomNumber == 0) {
+            avatar.DetCalidadPersonajes(new Avatar.Aang());
+            regularShow.DetCalidadPersonajes(new RegularShow.Mordecai());
+        } else if (randomNumber == 1) {
+            avatar.DetCalidadPersonajes(new Avatar.Katara());
+            regularShow.DetCalidadPersonajes(new RegularShow.Rigby());
+        } else if (randomNumber == 2) {
+            avatar.DetCalidadPersonajes(new Avatar.PrincipeZuko());
+            regularShow.DetCalidadPersonajes(new RegularShow.Musculoso());
+        } else if (randomNumber == 3) {
+            avatar.DetCalidadPersonajes(new Avatar.TophBeifong());
+            regularShow.DetCalidadPersonajes(new RegularShow.Benson());
+        } else if (randomNumber == 4) {
+            avatar.DetCalidadPersonajes(new Avatar.Azula());
+            regularShow.DetCalidadPersonajes(new RegularShow.Skips());
+        } else if (randomNumber == 5) {
+            avatar.DetCalidadPersonajes(new Avatar.Sokka());
+            regularShow.DetCalidadPersonajes(new RegularShow.Fantasmin());
+        } else if (randomNumber == 6) {
+            avatar.DetCalidadPersonajes(new Avatar.TyLee());
+            regularShow.DetCalidadPersonajes(new RegularShow.Margarita());
+        } else if (randomNumber == 7) {
+            avatar.DetCalidadPersonajes(new Avatar.Yue());
+            regularShow.DetCalidadPersonajes(new RegularShow.MrMaellard());
+        } else if (randomNumber == 8) {
+            avatar.DetCalidadPersonajes(new Avatar.Appa());
+            regularShow.DetCalidadPersonajes(new RegularShow.Papaleta());
+        } else if (randomNumber == 9) {
+            avatar.DetCalidadPersonajes(new Avatar.Suki());
+            regularShow.DetCalidadPersonajes(new RegularShow.Starla());
+        }
+    }
+
+    public void incrementCountersAndCheck(Queue currentQueue, Queue nextQueue, Queue previousQueue) {
+        for (int i = 0; i < currentQueue.getLength(); i++) {
+            Characters character = (Characters) currentQueue.dequeue().getElement();
+            character.incrementCounter();
+            if (character.counter >= 8 && previousQueue != null) {
+                character.resetCounter();
+                previousQueue.enqueue(character);
+            } else {
+                currentQueue.enqueue(character);
+            }
         }
     }
 }

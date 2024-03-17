@@ -23,6 +23,8 @@ public class AI extends Thread {
     int WinnerA, WinnerRS;
 
     Administrator admin = new Administrator();
+
+    int cicle = 0;
     
     
     @Override
@@ -34,6 +36,9 @@ public class AI extends Thread {
      public void Pelea(Characters characters1, Characters characters2) {
          fightRegularShow.insertBegin(characters1);
          fightAvatar.insertBegin(characters2);
+
+         cicle++;
+
 
 
          // Add a delay before announcing the winner
@@ -110,8 +115,49 @@ public class AI extends Thread {
 
              fightRegularShow.deleteBegin();
              fightAvatar.deleteBegin();
+
+             if (cicle % 2 == 0){
+                 Random rand = new Random();
+                 if (rand.nextInt(100) < 80){
+                     admin.addRandomCharacter();
+                 }
+             }
+
+             if (cicle % 1 == 0) {
+                 checkRefuerzoQueues();
+             }
+
          }
+
      }
+
+    private void checkRefuerzoQueues() {
+        Random rand = new Random();
+
+        // Check the refuerzoA queue
+        if (!avatar.refuerzoA.isEmpty()) {
+            Characters character = (Characters) avatar.refuerzoA.dequeue().getElement();
+            if (rand.nextInt(100) < 40) {
+                // 40% chance to move the character to the priority1A queue
+                avatar.priority1A.enqueue(character);
+            } else {
+                // If they fail, they go to the last place of the refuerzoA queue
+                avatar.refuerzoA.enqueue(character);
+            }
+        }
+
+        // Check the refuerzoRS queue
+        if (!regularshow.refuerzoRS.isEmpty()) {
+            Characters character = (Characters) regularshow.refuerzoRS.dequeue().getElement();
+            if (rand.nextInt(100) < 40) {
+                // 40% chance to move the character to the priority1RS queue
+                regularshow.priority1RS.enqueue(character);
+            } else {
+                // If they fail, they go to the last place of the refuerzoRS queue
+                regularshow.refuerzoRS.enqueue(character);
+            }
+        }
+    }
     
     public String Acciones(){
         if(fightAvatar.getSize() != 0 || fightRegularShow.getSize() != 0){

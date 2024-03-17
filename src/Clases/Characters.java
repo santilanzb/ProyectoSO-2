@@ -16,6 +16,8 @@ public class Characters {
     public boolean calidad;
     public String special;
 
+    public int counter;
+
     public String name;
     
     
@@ -29,6 +31,15 @@ public class Characters {
         this.calidad = false;
         this.special = generarEspecial();
         this.name = name;
+        this.counter = 0;
+    }
+
+    public void incrementCounter(){
+        this.counter++;
+    }
+
+    public void resetCounter(){
+        this.counter = 0;
     }
 
     public int getHabilidad() {
