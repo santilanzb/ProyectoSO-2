@@ -15,10 +15,12 @@ public class Characters {
     public int Agilidad;
     public boolean calidad;
     public String special;
+
+    public String name;
     
     
 
-    public Characters() {
+    public Characters(String name) {
 
         this.Habilidad = generarHabilidad(DetCalidad(60));
         this.PuntosVida = generarPuntosVida(DetCalidad(70));
@@ -26,6 +28,7 @@ public class Characters {
         this.Agilidad = generarAgilidad(DetCalidad(40));
         this.calidad = false;
         this.special = generarEspecial();
+        this.name = name;
     }
 
     public int getHabilidad() {
@@ -67,9 +70,18 @@ public class Characters {
     public void setSpecial(String special) {
         this.special = special;
     }
-    
-    
-    
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+
+
+
     public boolean DetCalidad(int probabilidad){
         Random random = new Random();
         int num = random.nextInt(101);

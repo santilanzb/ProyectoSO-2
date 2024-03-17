@@ -21,7 +21,8 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Mordecai(){
-           super();          
+           super("Mordecai");
+
         }
     }
     
@@ -29,7 +30,8 @@ public class RegularShow {
        Random random = new Random();
         int id = random. nextInt(0,1000);
         public Rigby(){
-           super();          
+           super("Rigby");
+
         }
     }
     
@@ -37,7 +39,8 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Musculoso(){
-           super();          
+           super("Musculoso");
+
         }
     }
     
@@ -45,7 +48,8 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Benson(){
-           super();          
+           super("Benson");
+
         }
     }
     
@@ -53,7 +57,8 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Skips(){
-           super();          
+           super("Skips");
+
         }
     }
     
@@ -61,7 +66,7 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Papaleta(){
-           super();          
+           super("Papaleta");
         }
     }
     
@@ -69,7 +74,7 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Starla(){
-           super();          
+           super("Starla");
         }
     }
     
@@ -77,7 +82,7 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Margarita(){
-           super();          
+           super("Margarita");
         }
     }
     
@@ -85,7 +90,7 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Fantasmin(){
-           super();          
+           super("Fantasmin");
         }
     }
     
@@ -93,7 +98,7 @@ public class RegularShow {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public MrMaellard(){
-           super();          
+           super("MrMaellard");
         }
     }
     

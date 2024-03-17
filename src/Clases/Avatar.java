@@ -25,7 +25,7 @@ public class Avatar {
         private Image photo;
         
         public Aang(){
-           super();
+           super("Aang");
            this.photo = null; // Inicializar photo como null
         }
         
@@ -48,7 +48,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Katara(){
-           super();          
+           super("Katara");
         }
     }
     
@@ -56,7 +56,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public PrincipeZuko(){
-           super();          
+           super("Principe Zuko");
         }
     }
     
@@ -64,7 +64,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public TophBeifong(){
-           super();          
+           super("Toph Beifong");
         }
     }
     
@@ -72,7 +72,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Azula(){
-           super();          
+           super("Azula");
         }
     }
     
@@ -80,7 +80,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Sokka(){
-           super();          
+           super("Sokka");
         }
     }
     
@@ -88,7 +88,7 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public TyLee(){
-           super();          
+           super("Ty Lee");
         }
     }
     
@@ -96,7 +96,8 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Yue(){
-           super();          
+           super("Yue");
+
         }
     }
     
@@ -104,7 +105,8 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Appa(){
-           super();          
+           super("Appa");
+
         }
     }
     
@@ -112,7 +114,8 @@ public class Avatar {
         Random random = new Random();
         int id = random. nextInt(0,1000);
         public Suki(){
-           super();          
+           super("Suki");
+
         }
     }
     
