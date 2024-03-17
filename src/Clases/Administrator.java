@@ -59,6 +59,8 @@ public class Administrator extends Thread {
         regularShow.DetCalidadPersonajes(papaleta);
         regularShow.DetCalidadPersonajes(starla);
 
+
+
         while (true) {
             administrarColas();
             try {
