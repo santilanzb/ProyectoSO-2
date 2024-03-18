@@ -3,12 +3,20 @@
  * @author santi
  */
 package Clases;
+import javax.swing.*;
 import java.util.Random;
 
 public class Administrator extends Thread {
     Avatar avatar = new Avatar();
     RegularShow regularShow = new RegularShow();
 
+    private DefaultListModel<String> avatarListModel;
+    private DefaultListModel<String> regularShowListModel;
+    
+    public Administrator(){
+        avatarListModel = new DefaultListModel<>();
+        regularShowListModel = new DefaultListModel<>();
+    }
     @Override
     public void run() {
 
@@ -63,6 +71,8 @@ public class Administrator extends Thread {
 
         while (true) {
             administrarColas();
+            updateQueueList(avatar.priority1A, avatar.priority2A, avatar.priority3A, avatarListModel);
+            updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShowListModel);
             try {
                 Thread.sleep(1000); // Sleep for a while before checking the queues again
             } catch (InterruptedException e) {
@@ -106,7 +116,40 @@ public class Administrator extends Thread {
         if (character1 != null && character2 != null) {
             ai.Pelea(character1, character2);
         }
+        
+        
     }
+
+    private void updateQueueList(Queue priority1, Queue priority2, Queue priority3, DefaultListModel<String> listModel) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                listModel.clear();
+                listModel.addElement("Priority 1: " + queueToString(priority1));
+                listModel.addElement("Priority 2: " + queueToString(priority2));
+                listModel.addElement("Priority 3: " + queueToString(priority3));
+            }
+        });
+    }
+    
+    private String queueToString(Queue queue) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < queue.getLength(); i++) {
+            Characters character = (Characters) queue.dequeue().getElement();
+            sb.append(character.getName()).append(", ");
+            queue.enqueue(character);
+        }
+        return sb.toString();
+    }
+    
+    public DefaultListModel<String> getAvatarListModel() {
+        return avatarListModel;
+    }
+
+    public DefaultListModel<String> getRegularShowListModel() {
+        return regularShowListModel;
+    }
+
 
     public void addRandomCharacter() {
         Random random = new Random();
