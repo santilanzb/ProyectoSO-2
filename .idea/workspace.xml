@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Interfaz/ApplicationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/ApplicationWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,6 +69,7 @@
       <workItem from="1710703806292" duration="886000" />
       <workItem from="1710728747718" duration="3547000" />
       <workItem from="1710733295935" duration="2273000" />
+      <workItem from="1710740008664" duration="3680000" />
     </task>
     <servers />
   </component>
