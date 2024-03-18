@@ -33,9 +33,8 @@ import Interfaz.ApplicationWindow;
  */
 public class Main {
 
-    /**
-     * @param args the command line arguments
-     */
+    
+            
     public static void main(String[] args) {
         Administrator admin = new Administrator();
         admin.start();
