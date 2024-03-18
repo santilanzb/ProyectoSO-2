@@ -85,6 +85,15 @@ public class Administrator extends Thread {
         AI ai = new AI();
         Characters character1 = null;
         Characters character2 = null;
+        
+            // Add print statements to check the state of your queues and characters
+        System.out.println("administrarColas method called");
+        System.out.println("Initial state of avatar.priority1A: " + avatar.priority1A);
+        System.out.println("Initial state of avatar.priority2A: " + avatar.priority2A);
+        System.out.println("Initial state of avatar.priority3A: " + avatar.priority3A);
+        System.out.println("Initial state of regularShow.priority1RS: " + regularShow.priority1RS);
+        System.out.println("Initial state of regularShow.priority2RS: " + regularShow.priority2RS);
+        System.out.println("Initial state of regularShow.priority3RS: " + regularShow.priority3RS);
 
         // Increment the counter for each character in the priority2A and priority3A queues
         incrementCountersAndCheck(avatar.priority2A, avatar.priority3A, avatar.priority1A);

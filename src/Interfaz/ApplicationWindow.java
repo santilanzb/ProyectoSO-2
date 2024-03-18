@@ -21,6 +21,8 @@ public class ApplicationWindow extends javax.swing.JFrame {
         administrator = new Administrator();
         avatarList.setModel(administrator.getAvatarListModel());
         regularShowList.setModel(administrator.getRegularShowListModel());
+        
+        administrator.start();
     }
 
     /**
