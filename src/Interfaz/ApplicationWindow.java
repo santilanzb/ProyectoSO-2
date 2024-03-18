@@ -5,6 +5,7 @@
 package Interfaz;
 
 import Clases.Administrator;
+import Clases.Avatar;
 
 /**
  *
@@ -12,6 +13,7 @@ import Clases.Administrator;
  */
 public class ApplicationWindow extends javax.swing.JFrame {
     private Administrator administrator;
+    Avatar avatar = new Avatar();
     /**
      * Creates new form ApplicationWindow
      */
@@ -21,6 +23,7 @@ public class ApplicationWindow extends javax.swing.JFrame {
         administrator = new Administrator();
         avatarList.setModel(administrator.getAvatarListModel());
         regularShowList.setModel(administrator.getRegularShowListModel());
+        
     }
 
     /**

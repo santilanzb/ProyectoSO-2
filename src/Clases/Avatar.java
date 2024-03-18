@@ -18,6 +18,25 @@ public class Avatar {
     Queue priority2A = new Queue();
     Queue priority3A = new Queue();
     Queue refuerzoA = new Queue();
+
+    public Queue getPriority1A() {
+        return priority1A;
+    }
+
+    public Queue getPriority2A() {
+        return priority2A;
+    }
+
+    public Queue getPriority3A() {
+        return priority3A;
+    }
+
+    public Queue getRefuerzoA() {
+        return refuerzoA;
+    }
+
+   
+    
     
     public static class Aang extends Characters {
         Random random = new Random();
