@@ -24,6 +24,9 @@ public class ApplicationWindow extends javax.swing.JFrame {
         avatarList.setModel(administrator.getAvatarListModel());
         regularShowList.setModel(administrator.getRegularShowListModel());
         
+
+        administrator.start();
+
     }
 
     /**
