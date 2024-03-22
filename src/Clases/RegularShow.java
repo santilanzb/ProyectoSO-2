@@ -28,13 +28,17 @@ public class RegularShow {
         
         public Mordecai(){
            super("Mordecai");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Mordecai.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Mordecai.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
 
@@ -47,13 +51,17 @@ public class RegularShow {
         
         public Rigby(){
            super("Rigby");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Rigby.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Rigby.png");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }
@@ -65,13 +73,17 @@ public class RegularShow {
         
         public Musculoso(){
            super("Musculoso");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Musculoso.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Musculoso.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -83,13 +95,17 @@ public class RegularShow {
         
         public Benson(){
            super("Benson");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Benson.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Benson.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }
@@ -101,13 +117,17 @@ public class RegularShow {
         
         public Skips(){
            super("Skips");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Skips.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Skips.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }
@@ -119,13 +139,17 @@ public class RegularShow {
         
         public Papaleta(){
            super("Papaleta");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Papaleta.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Papaleta.png");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }
@@ -137,13 +161,17 @@ public class RegularShow {
         
         public Starla(){
            super("Starla");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Starla.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Starla.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -155,13 +183,17 @@ public class RegularShow {
         
         public Margarita(){
            super("Margarita");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Margarita.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Margarita.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -173,13 +205,17 @@ public class RegularShow {
         
         public Fantasmin(){
            super("Fantasmin");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/Fantasmin.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/Fantasmin.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -191,13 +227,17 @@ public class RegularShow {
         
         public MrMaellard(){
            super("MrMaellard");
-           ImageIcon icon = createImageIcon("src/ImagesRegularShow/MrMaellard.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesRegularShow/MrMaellard.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }

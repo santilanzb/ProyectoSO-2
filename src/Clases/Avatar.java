@@ -27,13 +27,17 @@ public class Avatar {
         
         public Aang(){
            super("Aang");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Aang.jpg"); // replace with actual path
-           
-           if (icon != null) {
-                this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Aang.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
        }
         
         
@@ -46,13 +50,17 @@ public class Avatar {
         
         public Katara(){
            super("Katara");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Katara.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Katara.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
         
@@ -65,13 +73,17 @@ public class Avatar {
         
         public PrincipeZuko(){
            super("Principe Zuko");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/PrincipeZuko.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+            try {
+            File file = new File("src/ImagesAvatar/PrincipeZuko.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -82,13 +94,17 @@ public class Avatar {
         private Image photo;
         public TophBeifong(){
            super("Toph Beifong");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/TophBeifong.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/TophBeifong.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -99,13 +115,17 @@ public class Avatar {
         private Image photo;
         public Azula(){
            super("Azula");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Azula.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Azula.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
 
@@ -117,13 +137,17 @@ public class Avatar {
         private Image photo;
         public Sokka(){
            super("Sokka");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Sokka.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Sokka.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
     }
@@ -134,13 +158,17 @@ public class Avatar {
         private Image photo;
         public TyLee(){
            super("Ty Lee");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/TyLee.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/TyLee.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
     }
@@ -151,13 +179,17 @@ public class Avatar {
         private Image photo;
         public Yue(){
            super("Yue");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Yue.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Yue.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
 
         
@@ -169,13 +201,17 @@ public class Avatar {
         private Image photo;
         public Appa(){
            super("Appa");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Appa.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Appa.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
 
@@ -187,13 +223,17 @@ public class Avatar {
         private Image photo;
         public Suki(){
            super("Suki");
-           ImageIcon icon = createImageIcon("src/ImagesAvatar/Suki.jpg"); // replace with actual path
-           
-           if (icon != null) {
-           this.photo = icon.getImage();
+           try {
+            File file = new File("src/ImagesAvatar/Suki.jpg");
+            if (file.exists()) {
+                this.photo = ImageIO.read(file);
+                System.out.println("Image loaded successfully.");
             } else {
-           System.out.println("Image not found");
+                System.out.println("Image not found");
             }
+        } catch (IOException e) {
+            System.out.println("Error loading image: " + e.getMessage());
+        }
         }
         
 
