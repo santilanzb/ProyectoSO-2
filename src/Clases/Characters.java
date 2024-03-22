@@ -168,15 +168,18 @@ public class Characters {
 
     @Override
     public String toString() {
-        return "Characters{" +
-                "name='" + name + '\'' +
-                ", Habilidad=" + Habilidad +
-                ", PuntosVida=" + PuntosVida +
-                ", Fuerza=" + Fuerza +
-                ", Agilidad=" + Agilidad +
-                ", calidad=" + calidad +
-                ", special='" + special + '\'' +
-                '}';
+        return String.format(
+                "Character Details:\n" +
+                        "------------------\n" +
+                        "Name: %s\n" +
+                        "Habilidad: %d\n" +
+                        "PuntosVida: %d\n" +
+                        "Fuerza: %d\n" +
+                        "Agilidad: %d\n" +
+                        "Calidad: %b\n" +
+                        "Special: %s\n",
+                name, Habilidad, PuntosVida, Fuerza, Agilidad, calidad, special
+        );
     }
     
     public ImageIcon createImageIcon(String path) {

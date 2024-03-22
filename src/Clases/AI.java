@@ -3,6 +3,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Clases;
+import Interfaz.ApplicationWindow;
 import java.util.Random;
 import java.awt.Image;
 
@@ -24,9 +25,11 @@ public class AI extends Thread {
     int WinnerA, WinnerRS;
 
     Administrator admin;
+    ApplicationWindow applicationWindow;
 
-    public AI() {
-        this.admin = new Administrator(this);
+    public AI(ApplicationWindow applicationWindow) {
+        this.admin = new Administrator(this, applicationWindow);
+        this.applicationWindow = applicationWindow;
     }
 
     int cicle = 0;

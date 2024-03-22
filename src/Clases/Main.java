@@ -36,13 +36,13 @@ public class Main {
     
             
     public static void main(String[] args) {
-        AI ai = new AI();
-        Administrator admin = new Administrator(ai);
+        ApplicationWindow appWindow = new ApplicationWindow();
+        AI ai = new AI(appWindow);
+        Administrator admin = new Administrator(ai, appWindow);
         admin.start();
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            
+        java.awt.EventQueue.invokeLater(new Runnable()  {
             public void run() {
-                new ApplicationWindow().setVisible(true);
+                appWindow.setVisible(true);
             }
         });
     }

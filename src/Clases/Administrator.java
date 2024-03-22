@@ -3,6 +3,7 @@
  * @author santi
  */
 package Clases;
+import Interfaz.ApplicationWindow;
 import javax.swing.*;
 import java.util.Random;
 
@@ -10,14 +11,18 @@ public class Administrator extends Thread {
     Avatar avatar = new Avatar();
     RegularShow regularShow = new RegularShow();
     AI ai;
+
     int time = 10000;
+
+    ApplicationWindow applicationWindow;
 
     private DefaultListModel<String> avatarListModel;
     private DefaultListModel<String> regularShowListModel;
     
-    public Administrator(AI ai){
+    public Administrator(AI ai, ApplicationWindow applicationWindow){
         avatarListModel = new DefaultListModel<>();
         regularShowListModel = new DefaultListModel<>();
+        this.applicationWindow = applicationWindow;
         this.ai = ai;
     }
     @Override
@@ -79,6 +84,7 @@ public class Administrator extends Thread {
             updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShowListModel);
             try {
                 Thread.sleep(time); // Sleep for a while before checking the queues again
+
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -86,7 +92,7 @@ public class Administrator extends Thread {
     }
 
     public synchronized void administrarColas() {
-        AI ai = new AI();
+        AI ai = new AI(applicationWindow);
         Characters character1 = null;
         Characters character2 = null;
         
@@ -130,6 +136,14 @@ public class Administrator extends Thread {
             final Characters finalCharacter1 = character1;
             final Characters finalCharacter2 = character2;
             new Thread(() -> ai.Pelea(finalCharacter1, finalCharacter2)).start();
+            
+            SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                // Assuming you have a reference to the ApplicationWindow instance
+                applicationWindow.updateCharacterInfo(finalCharacter1, finalCharacter2);
+            }
+            });
         }
         
         
