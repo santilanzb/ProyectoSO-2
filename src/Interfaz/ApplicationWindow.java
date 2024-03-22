@@ -23,8 +23,8 @@ public class ApplicationWindow extends javax.swing.JFrame {
         initComponents();
         
         setLocationRelativeTo(null);
-        AI ai = new AI();
-        administrator = new Administrator(ai);
+        AI ai = new AI(this);
+        administrator = new Administrator(ai, this);
         avatarList.setModel(administrator.getAvatarListModel());
         regularShowList.setModel(administrator.getRegularShowListModel());
         
