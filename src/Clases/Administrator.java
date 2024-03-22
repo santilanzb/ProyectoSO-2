@@ -10,6 +10,7 @@ public class Administrator extends Thread {
     Avatar avatar = new Avatar();
     RegularShow regularShow = new RegularShow();
     AI ai;
+    int time = 10000;
 
     private DefaultListModel<String> avatarListModel;
     private DefaultListModel<String> regularShowListModel;
@@ -73,10 +74,11 @@ public class Administrator extends Thread {
 
         while (true) {
             administrarColas();
+            addRandomCharacter();
             updateQueueList(avatar.priority1A, avatar.priority2A, avatar.priority3A, avatarListModel);
             updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShowListModel);
             try {
-                Thread.sleep(3000); // Sleep for a while before checking the queues again
+                Thread.sleep(time); // Sleep for a while before checking the queues again
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
@@ -213,4 +215,10 @@ public class Administrator extends Thread {
             }
         }
     }
+
+    public void setTime(int time) {
+        this.time = time;
+    }
+    
+    
 }

@@ -41,7 +41,7 @@ public class AI extends Thread {
      public synchronized void Pelea(Characters characters1, Characters characters2) {
          fightRegularShow.insertBegin(characters1);
          fightAvatar.insertBegin(characters2);
-
+         
          cicle++;
          
         Image character1Photo = characters1.getPhoto();
