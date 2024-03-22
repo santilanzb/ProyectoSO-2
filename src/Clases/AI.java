@@ -65,39 +65,39 @@ public class AI extends Thread {
 
          // 40% chance that the fight occurs
          if (randomNumber <= 40) {
-             if (characters1.special == "enchufado" && (characters2.special == "calvo" || characters2.special == "malandro" || characters2.special == "calidoso" || characters2.special == "milloneta")) {
+             if (characters1.special.equals("enchufado") && (characters2.special.equals("calvo") || characters2.special.equals("malandro") || characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
                  WinnerRS++;
 
-             } else if (characters2.special == "enchufado" && (characters1.special == "calvo" || characters1.special == "malandro" || characters1.special == "calidoso" || characters1.special == "milloneta")) {
+             } else if (characters2.special.equals("enchufado") && (characters1.special.equals("calvo") || characters1.special.equals("malandro") || characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
                  WinnerA++;
 
-             } else if (characters1.special == "calvo" && (characters2.special == "malandro" || characters2.special == "calidoso" || characters2.special == "milloneta")) {
+             } else if (characters1.special.equals("calvo") && (characters2.special.equals("malandro") || characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
                  WinnerRS++;
 
-             } else if (characters2.special == "calvo" && (characters1.special == "malandro" || characters1.special == "calidoso" || characters1.special == "milloneta")) {
+             } else if (characters2.special.equals("calvo") && (characters1.special.equals("malandro") || characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
                  WinnerA++;
 
-             } else if (characters1.special == "malandro" && (characters2.special == "calidoso" || characters2.special == "milloneta")) {
+             } else if (characters1.special.equals("malandro") && (characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
                  WinnerRS++;
 
-             } else if (characters2.special == "malandro" && (characters1.special == "calidoso" || characters1.special == "milloneta")) {
+             } else if (characters2.special.equals("malandro") && (characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
                  WinnerA++;
 
-             } else if (characters1.special == "calidoso" && (characters2.special == "milloneta")) {
+             } else if (characters1.special.equals("calidoso") && (characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
                  WinnerRS++;
 
-             } else if (characters2.special == "calidoso" && (characters1.special == "milloneta")) {
+             } else if (characters2.special.equals("calidoso") && (characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
                  WinnerA++;
 
-             } else if (characters1.special == characters2.special) {
+             } else if (characters1.special.equals(characters2.special)) {
                  int randomWinner = random.nextInt(100) + 1;
 
                  // 50% chance to declare character1 as the winner
@@ -171,11 +171,25 @@ public class AI extends Thread {
     }
     
     public String Acciones(){
-        if(fightAvatar.getSize() != 0 || fightRegularShow.getSize() != 0){
-            return "Peleando";
+        if(fightAvatar.getSize() == 0 || fightRegularShow.getSize() == 0){
+            return "AI: Peleando";
         } else{
-            return "Decidiendo"; 
+            return "AI: Decidiendo"; 
         }
     }
+
+    public int getWinnerA() {
+        return WinnerA;
+    }
+
+    public int getWinnerRS() {
+        return WinnerRS;
+    }
+
+    public List getWinners() {
+        return Winners;
+    }
+    
+    
     
 }
