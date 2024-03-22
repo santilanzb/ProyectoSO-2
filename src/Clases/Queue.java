@@ -43,6 +43,7 @@ public class Queue {
     }
 
     public void enqueue(Object element) {
+        System.out.println("Adding character: " + ((Characters)element).getName() + " to queue");
         Nodo nodo = new Nodo(element);
         if (isEmpty()) {
             setHead(nodo);

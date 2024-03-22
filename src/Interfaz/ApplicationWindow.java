@@ -34,6 +34,8 @@ public class ApplicationWindow extends javax.swing.JFrame {
         
         new Thread(administrator).start();
     }
+
+
     
     public void updateCharacterInfo(Characters character1, Characters character2) {
     // Update text areas with character info
@@ -47,6 +49,12 @@ public class ApplicationWindow extends javax.swing.JFrame {
     ImageIcon imageIcon2 = new ImageIcon(new ImageIcon(character2.getPhoto()).getImage().getScaledInstance(character2ImageLabel.getWidth(), character2ImageLabel.getHeight(), Image.SCALE_DEFAULT));
     character2ImageLabel.setIcon(imageIcon2);
 }
+
+    public void updateWinnerCount(int winnerA, int winnerRS) {
+        // Assuming jLabel9 and jLabel8 are the labels for WinnerA and WinnerRS
+        jTextArea1.setText(String.valueOf(winnerA));
+        jTextArea2.setText(String.valueOf(winnerRS));
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.

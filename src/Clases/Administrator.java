@@ -18,10 +18,15 @@ public class Administrator extends Thread {
 
     private DefaultListModel<String> avatarListModel;
     private DefaultListModel<String> regularShowListModel;
-    
+
+    private DefaultListModel<String> avatarReinforcementListModel;
+    private DefaultListModel<String> regularShowReinforcementListModel;
+
     public Administrator(AI ai, ApplicationWindow applicationWindow){
         avatarListModel = new DefaultListModel<>();
         regularShowListModel = new DefaultListModel<>();
+        avatarReinforcementListModel = new DefaultListModel<>();
+        regularShowReinforcementListModel = new DefaultListModel<>();
         this.applicationWindow = applicationWindow;
         this.ai = ai;
     }
@@ -80,8 +85,8 @@ public class Administrator extends Thread {
         while (true) {
             administrarColas();
             addRandomCharacter();
-            updateQueueList(avatar.priority1A, avatar.priority2A, avatar.priority3A, avatarListModel);
-            updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShowListModel);
+            updateQueueList(avatar.priority1A, avatar.priority2A, avatar.priority3A, avatar.refuerzoA, avatarListModel);
+            updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShow.refuerzoRS, regularShowListModel);
             try {
                 Thread.sleep(time); // Sleep for a while before checking the queues again
 
@@ -120,6 +125,8 @@ public class Administrator extends Thread {
             character1 = (Characters) avatar.priority2A.dequeue().getElement();
         } else if (!avatar.priority3A.isEmpty()) {
             character1 = (Characters) avatar.priority3A.dequeue().getElement();
+        } else if (!avatar.refuerzoA.isEmpty()) {
+            character1 = (Characters) avatar.refuerzoA.dequeue().getElement();
         }
 
         // Fetch the head of the queue with the highest priority from RegularShow
@@ -129,6 +136,8 @@ public class Administrator extends Thread {
             character2 = (Characters) regularShow.priority2RS.dequeue().getElement();
         } else if (!regularShow.priority3RS.isEmpty()) {
             character2 = (Characters) regularShow.priority3RS.dequeue().getElement();
+        } else if (!regularShow.refuerzoRS.isEmpty()) {
+            character2 = (Characters) regularShow.refuerzoRS.dequeue().getElement();
         }
 
         // If we have a character from both shows, make them fight
@@ -142,6 +151,7 @@ public class Administrator extends Thread {
             public void run() {
                 // Assuming you have a reference to the ApplicationWindow instance
                 applicationWindow.updateCharacterInfo(finalCharacter1, finalCharacter2);
+                applicationWindow.updateWinnerCount(ai.getWinnerA(), ai.getWinnerRS());
             }
             });
         }
@@ -149,7 +159,7 @@ public class Administrator extends Thread {
         
     }
 
-    private void updateQueueList(Queue priority1, Queue priority2, Queue priority3, DefaultListModel<String> listModel) {
+    private void updateQueueList(Queue priority1, Queue priority2, Queue priority3, Queue reinforcement, DefaultListModel<String> listModel) {
         SwingUtilities.invokeLater(new Runnable() {
             @Override
             public void run() {
@@ -157,6 +167,7 @@ public class Administrator extends Thread {
                 listModel.addElement("Priority 1: " + queueToString(priority1));
                 listModel.addElement("Priority 2: " + queueToString(priority2));
                 listModel.addElement("Priority 3: " + queueToString(priority3));
+                listModel.addElement("Reinforcement: " + queueToString(reinforcement));
             }
         });
     }
@@ -177,6 +188,13 @@ public class Administrator extends Thread {
 
     public DefaultListModel<String> getRegularShowListModel() {
         return regularShowListModel;
+    }
+
+    public DefaultListModel<String> getAvatarReinforcementListModel() {
+        return avatarReinforcementListModel;
+    }
+    public DefaultListModel<String> getRegularShowReinforcementListModel() {
+        return regularShowReinforcementListModel;
     }
 
 

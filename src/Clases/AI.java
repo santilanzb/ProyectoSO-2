@@ -22,7 +22,8 @@ public class AI extends Thread {
     
     String estado = Acciones();
     
-    int WinnerA, WinnerRS;
+    public static int WinnerA = 0;
+    public static int WinnerRS = 0;
 
     Administrator admin;
     ApplicationWindow applicationWindow;
@@ -42,6 +43,7 @@ public class AI extends Thread {
     
                                  //RegularShow          //Avatar
      public synchronized void Pelea(Characters characters1, Characters characters2) {
+         System.out.println("Pelea method called with characters: " + characters1.getName() + " and " + characters2.getName());
          fightRegularShow.insertBegin(characters1);
          fightAvatar.insertBegin(characters2);
          
@@ -49,15 +51,20 @@ public class AI extends Thread {
          
         Image character1Photo = characters1.getPhoto();
         Image character2Photo = characters2.getPhoto();
+        applicationWindow.updateWinnerCount(getWinnerA(), getWinnerRS());
 
-
-
-         // Add a delay before announcing the winner
-         try {
-             Thread.sleep(10000); // Sleep for 10 seconds
-         } catch (InterruptedException e) {
-             e.printStackTrace();
+         if (cicle % 1 == 0) {
+             checkRefuerzoQueues();
          }
+
+
+         if (cicle % 2 == 0){
+             Random rand = new Random();
+             if (rand.nextInt(100) < 80){
+                 admin.addRandomCharacter();
+             }
+         }
+
 
          // Generate a random number between 1 and 100
          Random random = new Random();
@@ -126,23 +133,17 @@ public class AI extends Thread {
 
              fightRegularShow.deleteBegin();
              fightAvatar.deleteBegin();
+             System.out.println("Amount of winners from Avatar: " + WinnerA);
+             System.out.println("Amount of winners from Regular Show: " + WinnerRS);
 
-             if (cicle % 2 == 0){
-                 Random rand = new Random();
-                 if (rand.nextInt(100) < 80){
-                     admin.addRandomCharacter();
-                 }
-             }
 
-             if (cicle % 1 == 0) {
-                 checkRefuerzoQueues();
-             }
 
          }
 
      }
 
     private void checkRefuerzoQueues() {
+        System.out.println("checkRefuerzoQueues method called");
         Random rand = new Random();
 
         // Check the refuerzoA queue
