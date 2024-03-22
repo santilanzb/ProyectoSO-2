@@ -8,11 +8,7 @@
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/00000000000.xd" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/copilot/chatSessions/xd.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.properties" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/nbproject/private/private.xml" beforeDir="false" afterPath="$PROJECT_DIR$/nbproject/private/private.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Clases/AI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/AI.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clases/Administrator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Administrator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Clases/Queue.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Clases/Queue.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Interfaz/ApplicationWindow.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Interfaz/ApplicationWindow.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -81,6 +77,7 @@
       <workItem from="1711082340191" duration="3915000" />
       <workItem from="1711087948963" duration="1693000" />
       <workItem from="1711101103322" duration="6461000" />
+      <workItem from="1711107973612" duration="1086000" />
     </task>
     <servers />
   </component>

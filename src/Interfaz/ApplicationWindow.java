@@ -35,6 +35,10 @@ public class ApplicationWindow extends javax.swing.JFrame {
         new Thread(administrator).start();
     }
 
+    public void updateWinners(String winnersString) {
+        jTextArea3.setText(winnersString);
+    }
+
 
     
     public void updateCharacterInfo(Characters character1, Characters character2) {

@@ -15,7 +15,7 @@ public class AI extends Thread {
     
     List fightRegularShow = new List();
     List fightAvatar = new List();
-    List Winners = new List();
+    public static List Winners = new List();
     
     Avatar avatar = new Avatar();
     RegularShow regularshow = new RegularShow();
@@ -74,34 +74,42 @@ public class AI extends Thread {
          if (randomNumber <= 40) {
              if (characters1.special.equals("enchufado") && (characters2.special.equals("calvo") || characters2.special.equals("malandro") || characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
+                 updateWinners();
                  WinnerRS++;
 
              } else if (characters2.special.equals("enchufado") && (characters1.special.equals("calvo") || characters1.special.equals("malandro") || characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
+                 updateWinners();
                  WinnerA++;
 
              } else if (characters1.special.equals("calvo") && (characters2.special.equals("malandro") || characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
+                 updateWinners();
                  WinnerRS++;
 
              } else if (characters2.special.equals("calvo") && (characters1.special.equals("malandro") || characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
+                 updateWinners();
                  WinnerA++;
 
              } else if (characters1.special.equals("malandro") && (characters2.special.equals("calidoso") || characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
+                 updateWinners();
                  WinnerRS++;
 
              } else if (characters2.special.equals("malandro") && (characters1.special.equals("calidoso") || characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
+                 updateWinners();
                  WinnerA++;
 
              } else if (characters1.special.equals("calidoso") && (characters2.special.equals("milloneta"))) {
                  Winners.insertBegin(characters1);
+                 updateWinners();
                  WinnerRS++;
 
              } else if (characters2.special.equals("calidoso") && (characters1.special.equals("milloneta"))) {
                  Winners.insertBegin(characters2);
+                 updateWinners();
                  WinnerA++;
 
              } else if (characters1.special.equals(characters2.special)) {
@@ -110,11 +118,13 @@ public class AI extends Thread {
                  // 50% chance to declare character1 as the winner
                  if (randomWinner <= 50) {
                      Winners.insertBegin(characters1);
+                     updateWinners();
                      WinnerRS++;
                  }
                  // 50% chance to declare character2 as the winner
                  else {
                      Winners.insertBegin(characters2);
+                     updateWinners();
                      WinnerA++;
                  }
              }
@@ -177,6 +187,21 @@ public class AI extends Thread {
         } else{
             return "AI: Decidiendo"; 
         }
+    }
+
+    public String getWinnersString() {
+        StringBuilder winnersString = new StringBuilder();
+        Node current = Winners.getHead();
+        while (current != null) {
+            Characters character = (Characters) current.getElement();
+            winnersString.append(character.getName()).append("\n");
+            current = current.getNext();
+        }
+        return winnersString.toString();
+    }
+
+    public void updateWinners() {
+        applicationWindow.updateWinners(getWinnersString());
     }
 
     public int getWinnerA() {
