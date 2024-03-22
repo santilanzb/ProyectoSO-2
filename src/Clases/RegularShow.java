@@ -39,6 +39,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
 
@@ -62,6 +63,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }
@@ -84,6 +86,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -106,6 +109,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }
@@ -128,6 +132,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }
@@ -150,6 +155,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }
@@ -172,6 +178,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -194,6 +201,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -216,6 +224,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -238,6 +247,7 @@ public class RegularShow {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }

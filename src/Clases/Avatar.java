@@ -25,6 +25,7 @@ public class Avatar {
         int id = random. nextInt(0,1000);
         private Image photo;
         
+        
         public Aang(){
            super("Aang");
            try {
@@ -38,6 +39,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
        }
         
         
@@ -61,6 +63,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
         
@@ -84,6 +87,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+            setPhoto(photo);
         }
         
     }
@@ -105,6 +109,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -126,6 +131,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
 
@@ -148,6 +154,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
     }
@@ -169,6 +176,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
     }
@@ -190,6 +198,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
 
         
@@ -212,6 +221,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
 
@@ -234,6 +244,7 @@ public class Avatar {
         } catch (IOException e) {
             System.out.println("Error loading image: " + e.getMessage());
         }
+           setPhoto(photo);
         }
         
 

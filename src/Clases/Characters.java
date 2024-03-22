@@ -25,6 +25,12 @@ public class Characters {
         return photo;
     }
 
+    public void setPhoto(Image photo) {
+        this.photo = photo;
+    }
+    
+    
+
     public int counter;
 
     public String name;
