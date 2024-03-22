@@ -36,7 +36,8 @@ public class Main {
     
             
     public static void main(String[] args) {
-        Administrator admin = new Administrator();
+        AI ai = new AI();
+        Administrator admin = new Administrator(ai);
         admin.start();
         java.awt.EventQueue.invokeLater(new Runnable() {
             

@@ -4,6 +4,10 @@
  */
 package Clases;
 import java.util.Random;
+import javax.swing.ImageIcon;
+import java.net.URL;
+import javax.swing.JOptionPane;
+import java.awt.Image;
 /**
  *
  * @author santi
@@ -15,6 +19,11 @@ public class Characters {
     public int Agilidad;
     public boolean calidad;
     public String special;
+    private Image photo;
+    
+    public Image getPhoto() {
+        return photo;
+    }
 
     public int counter;
 
@@ -156,5 +165,29 @@ public class Characters {
         
         return randomString;
         }
+
+    @Override
+    public String toString() {
+        return "Characters{" +
+                "name='" + name + '\'' +
+                ", Habilidad=" + Habilidad +
+                ", PuntosVida=" + PuntosVida +
+                ", Fuerza=" + Fuerza +
+                ", Agilidad=" + Agilidad +
+                ", calidad=" + calidad +
+                ", special='" + special + '\'' +
+                '}';
+    }
+    
+    public ImageIcon createImageIcon(String path) {
+        URL imgURL = getClass().getResource(path);
+        if (imgURL != null) {
+            return new ImageIcon(imgURL);
+        } else {
+            JOptionPane.showMessageDialog(null, "Couldn't find file: " + path);
+            return null;
+        }
+    }
+
     
 }

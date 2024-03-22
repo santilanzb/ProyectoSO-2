@@ -9,13 +9,15 @@ import java.util.Random;
 public class Administrator extends Thread {
     Avatar avatar = new Avatar();
     RegularShow regularShow = new RegularShow();
+    AI ai;
 
     private DefaultListModel<String> avatarListModel;
     private DefaultListModel<String> regularShowListModel;
     
-    public Administrator(){
+    public Administrator(AI ai){
         avatarListModel = new DefaultListModel<>();
         regularShowListModel = new DefaultListModel<>();
+        this.ai = ai;
     }
     @Override
     public void run() {
@@ -74,14 +76,14 @@ public class Administrator extends Thread {
             updateQueueList(avatar.priority1A, avatar.priority2A, avatar.priority3A, avatarListModel);
             updateQueueList(regularShow.priority1RS, regularShow.priority2RS, regularShow.priority3RS, regularShowListModel);
             try {
-                Thread.sleep(1000); // Sleep for a while before checking the queues again
+                Thread.sleep(3000); // Sleep for a while before checking the queues again
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
         }
     }
 
-    public void administrarColas() {
+    public synchronized void administrarColas() {
         AI ai = new AI();
         Characters character1 = null;
         Characters character2 = null;
@@ -123,7 +125,9 @@ public class Administrator extends Thread {
 
         // If we have a character from both shows, make them fight
         if (character1 != null && character2 != null) {
-            ai.Pelea(character1, character2);
+            final Characters finalCharacter1 = character1;
+            final Characters finalCharacter2 = character2;
+            new Thread(() -> ai.Pelea(finalCharacter1, finalCharacter2)).start();
         }
         
         

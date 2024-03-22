@@ -4,6 +4,7 @@
  */
 package Clases;
 import java.util.Random;
+import java.awt.Image;
 
 /**
  *
@@ -22,7 +23,11 @@ public class AI extends Thread {
     
     int WinnerA, WinnerRS;
 
-    Administrator admin = new Administrator();
+    Administrator admin;
+
+    public AI() {
+        this.admin = new Administrator(this);
+    }
 
     int cicle = 0;
     
@@ -33,11 +38,14 @@ public class AI extends Thread {
     }
     
                                  //RegularShow          //Avatar
-     public void Pelea(Characters characters1, Characters characters2) {
+     public synchronized void Pelea(Characters characters1, Characters characters2) {
          fightRegularShow.insertBegin(characters1);
          fightAvatar.insertBegin(characters2);
 
          cicle++;
+         
+        Image character1Photo = characters1.getPhoto();
+        Image character2Photo = characters2.getPhoto();
 
 
 

@@ -5,6 +5,10 @@
 package Interfaz;
 
 import Clases.Administrator;
+import Clases.Characters;
+import java.awt.Image;
+import javax.swing.ImageIcon;
+import Clases.AI;
 
 /**
  *
@@ -19,12 +23,27 @@ public class ApplicationWindow extends javax.swing.JFrame {
         initComponents();
         
         setLocationRelativeTo(null);
-        administrator = new Administrator();
+        AI ai = new AI();
+        administrator = new Administrator(ai);
         avatarList.setModel(administrator.getAvatarListModel());
         regularShowList.setModel(administrator.getRegularShowListModel());
         
-        administrator.start();
+        
+        new Thread(administrator).start();
     }
+    
+    public void updateCharacterInfo(Characters character1, Characters character2) {
+    // Update text areas with character info
+    character1InfoTextArea.setText(character1.toString()); 
+    character2InfoTextArea.setText(character2.toString());
+
+    // Update image labels with character photos
+    ImageIcon imageIcon1 = new ImageIcon(new ImageIcon(character1.getPhoto()).getImage().getScaledInstance(character1ImageLabel.getWidth(), character1ImageLabel.getHeight(), Image.SCALE_DEFAULT));
+    character1ImageLabel.setIcon(imageIcon1);
+
+    ImageIcon imageIcon2 = new ImageIcon(new ImageIcon(character2.getPhoto()).getImage().getScaledInstance(character2ImageLabel.getWidth(), character2ImageLabel.getHeight(), Image.SCALE_DEFAULT));
+    character2ImageLabel.setIcon(imageIcon2);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,6 +61,12 @@ public class ApplicationWindow extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        character1ImageLabel = new javax.swing.JLabel();
+        character2ImageLabel = new javax.swing.JLabel();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        character1InfoTextArea = new javax.swing.JTextArea();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        character2InfoTextArea = new javax.swing.JTextArea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -76,16 +101,24 @@ public class ApplicationWindow extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel3.setText("Fight");
 
+        character1ImageLabel.setText("jLabel4");
+
+        character2ImageLabel.setText("jLabel5");
+
+        character1InfoTextArea.setColumns(20);
+        character1InfoTextArea.setRows(5);
+        jScrollPane3.setViewportView(character1InfoTextArea);
+
+        character2InfoTextArea.setColumns(20);
+        character2InfoTextArea.setRows(5);
+        jScrollPane4.setViewportView(character2InfoTextArea);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(233, 233, 233)
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -98,7 +131,27 @@ public class ApplicationWindow extends javax.swing.JFrame {
                             .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 249, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(38, 38, 38)))))
+                                .addGap(38, 38, 38))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(233, 233, 233)
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(80, 80, 80)
+                                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(174, 174, 174)
+                                        .addComponent(character1ImageLabel)))
+                                .addGap(18, 18, 18)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 271, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addGap(128, 128, 128)
+                                        .addComponent(character2ImageLabel)))))
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -106,7 +159,15 @@ public class ApplicationWindow extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 199, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 49, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(character2ImageLabel)
+                    .addComponent(character1ImageLabel))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jScrollPane3)
+                    .addComponent(jScrollPane4))
+                .addGap(30, 30, 30)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addComponent(jLabel1)
@@ -159,11 +220,17 @@ public class ApplicationWindow extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JList<String> avatarList;
+    private javax.swing.JLabel character1ImageLabel;
+    private javax.swing.JTextArea character1InfoTextArea;
+    private javax.swing.JLabel character2ImageLabel;
+    private javax.swing.JTextArea character2InfoTextArea;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JList<String> regularShowList;
     // End of variables declaration//GEN-END:variables
 }
